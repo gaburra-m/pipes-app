@@ -41,7 +41,7 @@
   <div class="col mt-2">
     <p-panel header="Héroes">
       <p-table
-        [value]="heroes | sortBy : orderBy"
+        [value]="heroes | sortBy : orderBy : isAsc"
         [tableStyle]="{ 'min-width': '50rem' }"
       >
         <ng-template pTemplate="header">

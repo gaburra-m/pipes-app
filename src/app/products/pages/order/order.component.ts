@@ -10,6 +10,7 @@ export class OrderComponent {
   public isUpperCase: boolean = false;
   // public orderBy: keyof Hero | undefined | '' = '';
   public orderBy?: keyof Hero;
+  public isAsc: boolean = false;
 
   public heroes: Hero[] = [
     {
@@ -45,5 +46,6 @@ export class OrderComponent {
 
   changeOrder(value: keyof Hero) {
     this.orderBy = value;
+    this.isAsc = !this.isAsc;
   }
 }
